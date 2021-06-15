@@ -27,7 +27,11 @@
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
   <link id="icon" rel="shortcut icon" href="https://eecs.pku.edu.cn/images/favicon.ico">
+  <link href="http://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
   <style>
+   @import url('http://fonts.cdnfonts.com/css/ocr-a-std');
+    /* @font-face {font-family: "OCR A Std"; src: url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.eot"); src: url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.woff") format("woff"), url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6a9c6944fe8451dd397fe9d0763a4c88.svg#OCR A Std") format("svg"); } */
+
     .header1{
       display: block;
       height: 650px;
@@ -120,7 +124,9 @@ progress::-webkit-progress-value{
 #welcome{
   text-align: center;
   color: white;
-  position: fixed;
+  /* position: fixed; */
+  margin: 0 auto;
+  width: 400px;
   font-family: OCR A Std, monospace;
           font-size: 20px;
           line-height: 1.15;
