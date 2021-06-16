@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -45,7 +46,9 @@
           display: block;
           object-fit: fill;
       }
-
+      .about-img{
+        border-radius: 50%;
+      }
       .upboard {
           position: absolute;
           height: 650px;
@@ -148,6 +151,18 @@ progress::-webkit-progress-value{
   left: 50%;
   transform: translate(-50%,0%);
   top: 50%;
+  
+}
+#deer{
+  display: block;
+  position: relative;
+  left:0px;
+}
+#grass{
+  position: relative;
+  top: -60px;
+  width:100% ;
+  height: 30px ;
 }
   </style>
 <!--[if lt IE 9]>
@@ -174,7 +189,7 @@ progress::-webkit-progress-value{
       setTimeout(
           function(){
             $(".loader_bg1").hide();
-          },5000
+          },3000
       )
       
       
@@ -207,6 +222,7 @@ progress::-webkit-progress-value{
                             <ul class="menu-area-main">
                               <li class="active"> <a href="index.html">Turing</a> </li>
                               <li> <a href="about.html">About</a> </li>
+                              <li><a href="games/games.html">Games</li>
                               <li  > <a  class="last_manu" href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
                               
                              </ul>
@@ -231,6 +247,9 @@ progress::-webkit-progress-value{
       </div>
   </div>
 
+  <div><img src="images/g3.gif" alt="" id="deer">
+    <img src="images/grassland.png" alt="" id="grass" class="downer">
+    </div>
 
 <!-- about  -->
 <div id="about" class="about">
@@ -249,7 +268,7 @@ progress::-webkit-progress-value{
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <div class="about-box">
-          <figure><img src="images/about.png" alt="#" /></figure>
+          <figure><img src="images/about.png" alt="#" class = "about-img"/></figure>
         </div>
       </div>
     </div>
@@ -286,7 +305,6 @@ progress::-webkit-progress-value{
 <!-- end upcoming -->
 
 <!-- Gallery -->
-
 
 <div id="gallery" class="Gallery">
   <div class="container"> 
@@ -391,8 +409,8 @@ progress::-webkit-progress-value{
           <div class="col-md-6 col-xs-10 border_top">
             <div style="margin: 30px; border-width: 15px;">
               <span style="text-align: center;color:white;margin: 10px;font-size: 18pt;">微信公众号：P大图灵</span>
-              <img src="images/1.jpg" alt=""
-                style="display: inline-block;width: 200px;height: 200px;border-radius: 50%;">
+              <a href = "https://cs.pku.edu.cn/index.htm"><img src="images/1.jpg" alt=""
+                style="display: inline-block;width: 200px;height: 200px;border-radius: 50%;"></a>
             </div>
             <!-- <form class="news">
                <h3>Newsletter</h3>
@@ -454,6 +472,7 @@ progress::-webkit-progress-value{
           <!-- sidebar -->
           <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
           <script src="js/custom.js"></script>
+          <!-- <script src="js/deer.js"></script> -->
           <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
