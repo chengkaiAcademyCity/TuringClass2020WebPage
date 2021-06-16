@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -154,15 +155,27 @@ progress::-webkit-progress-value{
   
 }
 #deer{
-  display: block;
-  position: relative;
-  left:0px;
+            display: block;
+            position: relative;
+            left:0px;
+        }
+        #grass{
+           position: relative;
+           top: -60px;
+            width: 100%;
+            height: 30px;
+            
+        }
+        #about{
+  margin-top: -60px;
 }
-#grass{
-  position: relative;
-  top: -60px;
-  width:100% ;
-  height: 30px ;
+@media screen and (max-width:600px) {
+  #loadinggif{
+    display:none;
+  }
+  #forscreen{
+    display: none;
+  }
 }
   </style>
 <!--[if lt IE 9]>
@@ -247,10 +260,41 @@ progress::-webkit-progress-value{
       </div>
   </div>
 
-  <div><img src="images/g3.gif" alt="" id="deer">
-    <img src="images/grassland.png" alt="" id="grass" class="downer">
-    </div>
 
+    <div id="forscreen">
+        <img src="images/g3.gif" alt="" id="deer">
+        <img src="images/grassland.png" alt="" id="grass" class="downer">
+      </div>
+
+      <script>
+        var x=0;
+        var times=0;
+            setInterval(
+             function(){
+                 var ddr=document.getElementById("deer");
+                 if (times%2==1){
+                    ddr.style.transform="rotateY(180deg)";
+                     x-=0.7;
+                     ddr.style.left=x+"px";
+                     if (x<0){
+                         times+=1;
+                     }
+                 }
+                 if (times%2==0){
+                    ddr.style.transform="rotateY(0deg)";
+                     x+=0.7;
+                     ddr.style.left=x+"px";
+                     if (x>1000){
+                         times+=1;
+                     }
+                 }
+             }
+            ,
+             1
+         );
+        
+         
+      </script>
 <!-- about  -->
 <div id="about" class="about">
   <div class="container">
@@ -276,7 +320,6 @@ progress::-webkit-progress-value{
   </div>
 </div>
 <!-- end abouts -->
-
 
 
 
@@ -375,8 +418,6 @@ progress::-webkit-progress-value{
 </div>
 
 <!-- end Gallery --> 
-
-
 
 
     <!--  footer -->
